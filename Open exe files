@@ -1,0 +1,28 @@
+The short answer is that os.system doesn't know where to find firefox.exe.
+
+A possible solution would be to use the full path. And it is recommended to use the subprocess module:
+
+import subprocess
+
+subprocess.call(['C:\Program Files\Mozilla Firefox\\firefox.exe'])
+Mind the \\ before the firefox.exe! If you'd use \f, Python would interpret this as a formfeed:
+
+>>> print('C:\Program Files\Mozilla Firefox\firefox.exe')
+C:\Program Files\Mozilla Firefox
+                                irefox.exe
+And of course that path doesn't exist. :-)
+
+So either escape the backslash or use a raw string:
+
+>>> print('C:\Program Files\Mozilla Firefox\\firefox.exe')
+C:\Program Files\Mozilla Firefox\firefox.exe
+>>> print(r'C:\Program Files\Mozilla Firefox\firefox.exe')
+C:\Program Files\Mozilla Firefox\firefox.exe
+Note that using os.system or subprocess.call will stop the current application until the program that is started finishes. So you might want to use subprocess.Popen instead. That will launch the external program and then continue the script.
+
+subprocess.Popen(['C:\Program Files\Mozilla Firefox\\firefox.exe', '-new-tab'])
+This will open firefox (or create a new tab in a running instance).
+
+A more complete example is my open utility I publish via github. This uses regular expressions to match file extensions to programs to open those files with. Then it uses subprocess.Popen to open those files in an appropriate program. For reference I'm adding the complete code for the current version below.
+
+Note that this program was written with UNIX-like operating systems in mind. On ms-windows you could probably get an application for a filetype from the registry.
