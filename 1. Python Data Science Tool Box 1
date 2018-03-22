@@ -18,5 +18,20 @@
    但是print 不行
    
    
-   
+2. tuple 和list 区别:
+      tuple create 以后元素无法被更改, list 的元素可以被更改
+      tuple 用() 创建
+      list 用[] 创建
+      
+      如何unpack tuple呢？ Unpack nums into num1, num2, and num3
+      nums=(1,2,3)
+      num1, num2, num3 = nums
+      得到的结果是：
+      num1=1
+      num2=2
+      num3=3
+      
+      
+ 3. 
+      
 
