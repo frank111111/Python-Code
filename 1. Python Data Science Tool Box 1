@@ -1,1 +1,22 @@
+1. 当create function 的时候，最好用 return 来return function 中的 varibale, 因为 print 不会保留varibale 本身的 type, 只能是non type. 但是return
+   可以return float, integer 这些varibale type.
+   
+   def shout(word):
+    """Return a string with three exclamation marks"""
+    # Concatenate the strings: shout_word
+    shout_word=word+"!!!"    
+
+    # Replace print with return
+    return (shout_word)
+
+    # Pass 'congratulations' to shout: yell
+    yell=shout("congratulations")
+
+    # Print yell
+    print(yell)
+   另外 return 由于print 的一点是, 当function被call 的时候(上面例子中的shout), 你可以assign result to another varibale(上面例子中的yell= shout("congratulations"))
+   但是print 不行
+   
+   
+   
 
