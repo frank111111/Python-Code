@@ -1,3 +1,4 @@
+##########################################Writting My Own Functions###########################################
 1. 当create function 的时候，最好用 return 来return function 中的 varibale, 因为 print 不会保留varibale 本身的 type, 只能是non type. 但是return
    可以return float, integer 这些varibale type.
    
@@ -34,4 +35,21 @@
       
  3. 
       
+###################################Default Arguments,Variable Length Arguments, and scope##############################################
+
+
+
+
+
+
+
+###################################Lambda Functions and Error Handling#################################################################
+Lambda Function： Anonymous,a function without names.
+In python, there are two ways to build functions: def, lambda. Lambda functions normally used together with filter(),Map(),Reduce().
+
+https://www.python-course.eu/lambda.php
+
+
+
+
 
