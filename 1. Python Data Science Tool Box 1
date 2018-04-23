@@ -46,8 +46,15 @@
 ###################################Lambda Functions and Error Handling#################################################################
 Lambda Function： Anonymous,a function without names.
 In python, there are two ways to build functions: def, lambda. Lambda functions normally used together with filter(),Map(),Reduce().
+Lambda 函数，本来是如此之样：
+
+=> p=(lambda x,y: x+y)
+=> p(1,2)
+=> 3
+一般lambda 是嵌套在其他函数中使用，最常和filter(),map(),reduce() 这三个函数使用.Lambda 函数相比于def 函数, 最大的优点就是简单,易于使用。
 
 https://www.python-course.eu/lambda.php
+
 
 
 
